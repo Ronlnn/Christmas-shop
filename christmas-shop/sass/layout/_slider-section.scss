@@ -1,0 +1,139 @@
+@use '../base/reset';
+@use '../base/_typography.scss';
+@use '../utils/helpers';
+@use '../utils/variables' as *;
+
+.slider-section {
+  height: 488px;
+  background-color: $primary;
+  background-position: center;
+  position: relative;
+  padding-top: 60px;
+  background-image: url('../src/bg-snow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.slider-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slider-head-container {
+  h2 {
+    color: $white;
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+.slider-row-container {
+  transition: transform 0.3s ease-in-out;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 82px;
+  margin-bottom: 20px;
+  margin-right: 82px;
+  gap: 20px;
+}
+.slider-text {
+  font-family: Montserrat;
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $white;
+}
+.slider-img {
+  width: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.slider-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 82px;
+  gap: 20px;
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  color: $white;
+  border: 2px solid $white;
+  svg {
+    path {
+      stroke: $white;
+      transition: stroke 0.3s, fill 0.3s;
+    }
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $white;
+      transition: 0.3s;
+      svg path {
+        stroke: $white;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.inactive-slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  border-radius: 20px;
+  color: $white-40;
+  border: 2px solid $white-40;
+  pointer-events: none;
+  cursor: default;
+  svg path {
+    stroke: $white;
+    stroke-opacity: 0.4;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-section {
+    max-height: 488px;
+    height: 100%;
+    padding-top: 60px;
+  }
+  .slider-row-container {
+    margin-left: 8px;
+  }
+  .slider-button-container {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .slider-section {
+    overflow: hidden;
+  }
+  .slider-head-container {
+    margin-top: 0;
+  }
+  .slider-row-container {
+    margin-left: 8px;
+    max-width: 364px;
+  }
+  .slider-button-container {
+    margin-right: 8px;
+  }
+}

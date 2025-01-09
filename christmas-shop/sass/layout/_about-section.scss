@@ -1,0 +1,190 @@
+@use '../base/reset';
+@use '../base/_typography.scss';
+@use '../utils/helpers';
+@use '../utils/variables' as *;
+
+.about-section {
+  // box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+  max-height: 648px;
+  height: auto;
+  background-color: $primary;
+  padding: 60px 82px 60px 82px;
+  background-image: url('../src/bg-snow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 100%;
+  height: 528px;
+  background-color: $white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 153px;
+  overflow: hidden;
+
+  padding-left: 60px;
+  p {
+    text-align: left;
+  }
+
+  .text-container {
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    div {
+      text-align: left;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .santa-container {
+    max-width: 638px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .santa {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    width: 100%;
+    height: 100%;
+    padding: 60px 8px 60px 8px;
+
+    .about-container {
+      gap: 60px;
+      overflow: hidden;
+
+      .text-container {
+        width: 256px;
+        height: 436px;
+        .caption {
+          text-align: left;
+        }
+      }
+      .santa-container {
+        max-height: 528px;
+        height: 100%;
+        width: 376px;
+        max-width: 100%;
+        overflow: hidden;
+
+        .santa {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .about-section {
+    min-height: 1000px;
+    max-width: 380px;
+    width: 100%;
+    padding: 60px 8px 60px 8px;
+    display: flex;
+    .about-container {
+      max-width: 364px;
+      width: 100%;
+      height: 880px;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      padding-left: 0;
+      flex-basis: auto;
+      .text-container {
+        max-height: 352px;
+        height: 100%;
+        margin-left: 20px;
+        h2 {
+          width: 324px;
+          height: 72px;
+        }
+        p {
+          width: 324px;
+          height: 96px;
+        }
+      }
+      .santa-container {
+        height: 528px;
+        width: 100%;
+        max-width: 364px;
+
+        .santa {
+          width: 100%;
+          height: 528px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+.about-section {
+    min-height: 1000px;
+    max-width: 480px;
+    width: 100%;
+    padding: 60px 8px 60px 8px;
+    display: flex;
+    .about-container {
+      max-width: 480px;
+      width: 100%;
+      height: 880px;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      padding-left: 0;
+      flex-basis: auto;
+      .text-container {
+        max-height: 352px;
+        height: 100%;
+        margin-left: 20px;
+        h2 {
+          width: 324px;
+          height: 72px;
+        }
+        p {
+          width: 324px;
+          height: 96px;
+        }
+      }
+      .santa-container {
+        height: 528px;
+        width: 100%;
+        max-width: 480px;
+
+        .santa {
+          width: 100%;
+          height: 528px;
+        }
+      }
+    }
+  }
+}

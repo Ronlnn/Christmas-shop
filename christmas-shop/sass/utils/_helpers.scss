@@ -1,0 +1,58 @@
+@use './variables' as *;
+
+.explore-button {
+  background-color: $dark;
+  color: $white;
+  padding: 20px 32px 20px 32px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  font-style: normal;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: $white;
+      color: $dark;
+      transition: 0.6s;
+    }
+  }
+}
+
+.work {
+  color: $tag-purple;
+  text-align: start;
+}
+
+.health {
+  color: $tag-green;
+  text-align: start;
+}
+
+.harmony {
+  color: $tag-pink;
+  text-align: start;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+@media screen and (max-width: 768px) {
+  .scroll-to-top {
+    display: block;
+  }
+}
+

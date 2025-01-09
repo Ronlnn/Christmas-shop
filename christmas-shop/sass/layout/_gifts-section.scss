@@ -1,0 +1,105 @@
+@use '../base/reset';
+@use '../base/_typography.scss';
+@use '../utils/helpers';
+@use '../utils/variables' as *;
+@use '../layout/_gifts-page';
+
+.gifts-section {
+  box-sizing: border-box;
+  // height: 554px;
+  height: auto;
+  background-color: $primary;
+  background-position: center;
+  padding-top: 60px;
+  background-image: url('../src/bg-snow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h2 {
+    text-align: center;
+    color: $white;
+    margin-top: 12px;
+  }
+}
+.gifts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 310px;
+  height: 342px;
+  background-color: $white;
+  cursor: pointer;
+  border-radius: 20px;
+
+  h4 {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 8px;
+  }
+  h3 {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover h3 {
+      color: $primary;
+      transition: 0.3s;
+    }
+  }
+  .img-container {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background-color: $bg-color;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .gift-text-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gifts-section {
+    height: auto;
+    padding-bottom: 0;
+  
+
+    .gifts-container {
+      height: 696px;
+    }
+  }
+}
+@media screen and (max-width: 630px) {
+  .gifts-section {
+    min-height: 1400px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .gifts-section {
+    height: 1608px;
+    padding-bottom: 0;
+    .gifts-container {
+      margin-top: 12px;
+    }
+  }
+}
+
+

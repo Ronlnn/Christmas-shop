@@ -1,0 +1,105 @@
+@use '../base/reset';
+@use '../base/_typography.scss';
+@use '../utils/helpers';
+@use '../utils/variables' as *;
+
+.hero-section {
+  height: 524px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: url('../src/bg-snow.png'), url('../src/bg-ball.png');
+  background-color: $primary;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 12px;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    width: 30%;
+  }
+
+}
+
+@media screen and (max-width: 1100px){
+  .hero-container{
+    h1{
+      align-items: center;
+      min-width: 400px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 60px 171px 60px 171px;
+  }
+  .hero-container {
+    width: 100%;
+    h1 {
+      width: 430px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px){
+  .hero-container{
+    h1{
+      align-items: center;
+      width: 70%;
+    }
+    div{
+
+      min-width: 400px;
+    }
+  }
+}
+@media screen and (max-width: 414px){
+  .hero-section{
+    padding: 0;
+    h1{
+      min-height: 150px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 380px) {
+  .hero-section {
+    height: 100%;
+    max-height: 572px;
+    width: 100%;
+    max-width: 380px;
+    padding: 60px 8px 60px 8px;
+    background-size: cover;
+  }
+  .hero-container {
+    max-width: 364px;
+    h1 {
+      max-width: 364px;
+    }
+  }
+}
+
+@media screen and (max-width: 410px){
+  .hero-section {
+    height: 100%;
+    max-height: 572px;
+    width: 100%;
+    max-width: 380px;
+    padding: 60px 8px 60px 8px;
+    background-size: cover;
+  }
+}

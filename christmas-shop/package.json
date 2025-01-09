@@ -1,0 +1,12 @@
+{
+  "name": "christmas-shop",
+  "version": "1.0.0",
+  "description": "Christmas Shop",
+  "scripts": {
+    "build-css": "sass sass/main.scss css/main.css --style compressed",
+    "watch-css": "sass --watch sass/main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}
